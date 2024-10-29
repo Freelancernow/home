@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload File</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="upload-container">
+        <h2>Upload Your File</h2>
+        <input type="file" id="fileInput" multiple>
+        <button id="uploadButton" onclick="uploadFiles()">Upload</button>
+        
+        <div id="progressContainer" class="progress-container" style="display: none;">
+            <div id="progressBar" class="progress-bar"></div>
+        </div>
+        
+        <div id="message" class="message" style="display: none;"></div>
+    </div>
+
+    <script>
+        function uploadFiles() {
+            const fileInput = document.getElementById('fileInput');
+            const progressContainer = document.getElementById('progressContainer');
+            const progressBar = document.getElementById('progressBar');
+            const message = document.getElementById('message');
+
+            // Clear previous messages
+            message.style.display = 'none';
+            progressBar.style.width = '0%';
+
+            const files = fileInput.files;
+            if (files.length === 0) {
+                alert('Please select at least one file to upload.');
+                return;
+            }
+
+            progressContainer.style.display = 'block';
+            let totalSize = 0;
+
+            // Calculate total file size
+            for (let file of files) {
+                totalSize += file.size;
+            }
+
+            // Start upload simulation
+            let uploadedSize = 0;
+            let totalDuration = 0;
+            for (let file of files) {
+                // Duration calculation based on file size (10 seconds for 1MB)
+                totalDuration += Math.ceil(file.size / (1024 * 1024)) * 10; // Time in seconds
+            }
+
+            const uploadInterval = setInterval(() => {
+                // Simulate upload
+                uploadedSize += totalSize / totalDuration * 100; // Increase size based on duration
+                const progressPercentage = Math.min(uploadedSize / totalSize * 100, 100);
+
+                // Update the progress bar
+                progressBar.style.width = progressPercentage + '%';
+
+                if (progressPercentage >= 100) {
+                    clearInterval(uploadInterval);
+                    // Show success message
+                    message.innerText = 'Your file uploaded successfully. Wait for admin approval.';
+                    message.style.display = 'block';
+                }
+            }, 100);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelance Profile Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="profile-container">
+        <div class="profile-header">
+            <img src="mehzabin1.jpg" alt="Profile Photo" id="profilePhoto">
+            <h2 id="name">Mehzabin Choudhury</h2>
+            <p id="username">@mehzabin</p>
+            <p id="balance">Balance: $8</p>
+            <button class="chat-button" onclick="redirectToWhatsApp()">Chat with Admin</button>
+        </div>
+        
+        <div class="profile-content">
+            <!-- Buttons -->
+            <div class="buttons">
+                <button class="action-button" onclick="location.href='worker.html'">Worker List</button>
+                <button class="action-button" onclick="location.href='upload.html'">Upload File</button>
+            </div>
+            
+            <!-- Job Section -->
+            <div class="job-section">
+                <h3>Available Jobs</h3>
+                <div class="job">
+                    <img src="data-entry.jpg" alt="Data Entry">
+                    <p>Data Entry</p>
+                </div>
+                <div class="job">
+                    <img src="photo-editing.jpg" alt="Photo Editing">
+                    <p>Photo Editing</p>
+                </div>
+                <div class="job">
+                    <img src="content-writing.jpg" alt="Content Writing">
+                    <p>Content Writing</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function redirectToWhatsApp() {
+            window.location.href = "https://wa.me/8801787095001";
+        }
+    </script>
+</body>
+</html>

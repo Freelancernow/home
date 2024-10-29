@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worker List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .worker-list-container {
+            
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Aligns items to the left */
+        }
+
+        h2 {
+            margin: 20px 0;
+            color: #333;
+        }
+
+        .admin-card {
+            display: flex;
+            align-items: center;
+            background-color: #4CAF50;
+            color: #ffffff;
+            width: 90%;
+            max-width: 600px;
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .admin-card img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .worker-list {
+            display: flex;
+            flex-direction: column; /* Aligns workers vertically */
+            gap: 15px;
+            width: 90%;
+            max-width: 900px;
+        }
+
+        .worker-card {
+            display: flex;
+            align-items: center;
+            background-color: #ffffff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 100%; /* Makes the worker card full width */
+            max-width: 400px; /* Optional max width for worker cards */
+            text-align: left; /* Aligns text to the left */
+        }
+
+        .worker-card img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .worker-info {
+            flex-grow: 1;
+        }
+
+        .contact-button {
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="worker-list-container">
+        <!-- Admin Section -->
+        <div class="admin-card">
+            <img src="admin.jpg" alt="Rafid Ahmed">
+            <div>
+                <h3>Rafid Ahmed</h3>
+                <button class="contact-button" onclick="window.open('https://wa.me/+8801787095001')">Contact</button>
+            </div>
+        </div>
+
+        <!-- Worker List -->
+        <h2>Workers</h2>
+        <div class="worker-list">
+            <div class="worker-card">
+                <img src="mehzabin1.jpg" alt="Mehzabin Choudhury">
+                <div class="worker-info">
+                    <h3>Mehzabin Choudhury</h3>
+                    <button class="contact-button" onclick="window.open('https://wa.me/')">Contact</button>
+                </div>
+            </div>
+            <div class="worker-card">
+                <img src="g1.jpg" alt="Nupur Freelancer">
+                <div class="worker-info">
+                    <h3>Nupur Freelancer</h3>
+                    <button class="contact-button" onclick="window.open('https://wa.me/')">Contact</button>
+                </div>
+            </div>
+            <div class="worker-card">
+                <img src="b1.jpg" alt="Siyam Islam">
+                <div class="worker-info">
+                    <h3>Siyam Islam</h3>
+                    <button class="contact-button" onclick="window.open('https://wa.me/')">Contact</button>
+                </div>
+            </div>
+            <div class="worker-card">
+                <img src="g2.jpg" alt="Sarah Bin Nazmul">
+                <div class="worker-info">
+                    <h3>Sarah Bin Nazmul</h3>
+                    <button class="contact-button" onclick="window.open('https://wa.me/')">Contact</button>
+                </div>
+            </div>
+            <div class="worker-card">
+                <img src="d.jpg" alt="Rakib TST">
+                <div class="worker-info">
+                    <h3>Rakib TST</h3>
+                    <button class="contact-button" onclick="window.open('https://wa.me/')">Contact</button>
+                </div>
+            </div>
+            <div class="worker-card">
+                <img src="b3.jpg" alt="Adnan Hassan">
+                <div class="worker-info">
+                    <h3>Adnan Hassan</h3>
+                    <button class="contact-button" onclick="window.open('https://wa.me/+8801787095001')">Contact</button>
+                </div>
+            </div>
+            <div class="worker-card">
+                <img src="b2.jpg" alt="Leo The Lion">
+                <div class="worker-info">
+                    <h3>Leo The Lion</h3>
+                    <button class="contact-button" onclick="window.open('https://wa.me/')">Contact</button>
+                </div>
+            </div>
+            <div class="worker-card">
+                <img src="d.jpg" alt="Mohammed Naiem">
+                <div class="worker-info">
+                    <h3>Mohammed Naiem</h3>
+                    <button class="contact-button" onclick="window.open('')">Contact</button>
+                </div>
+            </div>
+            <div class="worker-card">
+                <img src="d.jpg" alt="Sarmin">
+                <div class="worker-info">
+                    <h3>Sarmin</h3>
+                    <button class="contact-button" onclick="window.open('')">Contact</button>
+                </div>
+            </div>
+            <div class="worker-card">
+                <img src="d.jpg" alt="Nupur 2nd">
+                <div class="worker-info">
+                    <h3>Nupur 2nd</h3>
+                    <button class="contact-button" onclick="window.open('')">Contact</button>
+                </div>
+            </div>
+            <div class="worker-card">
+                <img src="d.jpg" alt="Simi Islam">
+                <div class="worker-info">
+                    <h3>Simi Islam</h3>
+                    <button class="contact-button" onclick="window.open('')">Contact</button>
+                </div>
+            </div>
+            <div class="worker-card">
+                <img src="d.jpg" alt="Zara Moni">
+                <div class="worker-info">
+                    <h3>Zara Moni</h3>
+                    <button class="contact-button" onclick="window.open('')">Contact</button>
+                </div>
+            </div>
+            <div class="worker-card">
+                <img src="d.jpg" alt="Marjan Chowdhury">
+                <div class="worker-info">
+                    <h3>Marjan Chowdhury</h3>
+                    <button class="contact-button" onclick="window.open('')">Contact</button>
+                </div>
+            </div>
+
+
+
+
+
+
+   <div class="worker-card">
+                <img src="d.jpg" alt="Sakil Ahmed">
+                <div class="worker-info">
+                    <h3>Lima Islam</h3>
+                    <button class="contact-button" onclick="window.open('')">Contact</button>
+                </div>
+            </div>
+
+
+
+   <div class="worker-card">
+                <img src="d.jpg" alt="Sakil Ahmed">
+                <div class="worker-info">
+                    <h3>Mehedi Islam</h3>
+                    <button class="contact-button" onclick="window.open('')">Contact</button>
+                </div>
+            </div>
+
+
+   <div class="worker-card">
+                <img src="d.jpg" alt="Sakil Ahmed">
+                <div class="worker-info">
+                    <h3>Sakil Ahmed</h3>
+                    <button class="contact-button" onclick="window.open('')">Contact</button>
+                </div>
+            </div>
+
+
+   <div class="worker-card">
+                <img src="tasnim.jpg" alt="Tasnim">
+                <div class="worker-info">
+                    <h3>Tasnim Choudhury</h3>
+                    <button class="contact-button" onclick="window.open('')">Contact</button>
+                </div>
+            </div>
+
+
+
+   <div class="worker-card">
+                <img src="meher.jpg" alt="Meher">
+                <div class="worker-info">
+                    <h3>Meher RN</h3>
+                    <button class="contact-button" onclick="window.open('')">Contact</button>
+                </div>
+            </div>
+
+
+
+            <div class="worker-card">
+                <img src="rhea.jpg" alt="Rhea">
+                <div class="worker-info">
+                    <h3>Rhea Islam </h3>
+                    <button class="contact-button" onclick="window.open('')">Contact</button>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="worker-card">
+                <img src="tomiha.jpg" alt="tomiha">
+                <div class="worker-info">
+                    <h3>Tomiha Naznin</h3>
+                    <button class="contact-button" onclick="window.open('')">Contact</button>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</body>
+</html>
